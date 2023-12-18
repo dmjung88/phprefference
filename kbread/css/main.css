@@ -1,0 +1,118 @@
+      
+     
+      #Login{
+        text-decoration: none;
+        color: black;
+        margin-left: 30px;
+      }
+     .footer-li {
+      display: inline-block;
+     }
+     a{
+      font-family: 'KOTRA_BOLD-Bold';
+     }
+
+       .main{
+        background-image: url(https://img-cf.kurly.com/shop/data/goodsview/20180307/gv10000019109_1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 650px;
+        overflow:hidden;
+    
+      } 
+
+      .second-main{
+        background-image: url(https://www.chocolatier.or.kr/wp-content/uploads/2021/04/mobile2222.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 900px;
+        
+      overflow:hidden;
+    
+      } 
+      @font-face {
+    font-family: 'KOTRA_BOLD-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    
+    }
+    @font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media (min-width: 768px) {
+  #con1 {
+    width: 350px;
+    
+  }
+}
+
+@media (min-width: 992px) {
+  #con1 {
+    width: 350px;
+  }
+}
+@media (min-width: 768px) {
+  #con2 {
+    width: 550px;
+    
+  }
+}
+
+@media (min-width: 992px) {
+  #con2 {
+    width: 550px;
+  }
+}
+#s1{
+  font-size: 33px;
+  color: #FFFFFF;
+  font-family: 'GmarketSansLight';
+}
+
+
+
+
+  .product_bread :hover{
+    background: rgba(255, 255, 255, 0.3);
+/* 변형할 것은 배경 1초, 빠른 시작 서서히 감속*/
+transition: background 1s ease-out;
+
+  }
+
+
+.hover-ch{
+  color: white;
+  
+}
+
+.a-ch{
+  text-decoration: none;
+}
+
+.div-ch{
+  background-color: black;
+}
+.div-ch:hover{
+  background-color: burlywood;
+  transition: 0.7s;
+}
+.product{
+  color: #2B2821;
+  text-decoration: none;
+}
+.product{
+  color: #2B2821;
+  text-decoration: none;
+}
+.product:hover{
+  color: black;
+  
+}
+.price{
+  color: #BD8860;
+}

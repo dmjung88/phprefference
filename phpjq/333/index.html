@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Car Shop</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+	
+	<div class="container text-center mt-5">
+		<h2>Search DataBase</h2>
+		
+
+		<input type="text" class="form-control" placeholder="Enter car name..." name="search" id="search">
+		
+		<div class="form-group mt-5">
+			<input type="text" class="form-control" name="car_title" id="add-car" placeholder="Add the title of the car">
+			<button class="btn btn-success mt-3" id="add-car-btn">Add Car</button>
+		</div>
+		
+		<h2 class="mt-5" id="result"></h2>
+		<br>
+		<p id="car-added-alert"></p>
+		
+		
+
+
+	</div>
+
+
+
+
+	<!-- UPDATE MODAL -->
+	<div class="modal fade" id="update-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title">Update the Car</h1>
+					<button class="close" type="button" data-dismiss="modal" area-label="close"><span area-hidden="true">&times;</span></button>
+				</div>
+
+				<div class="modal-body">
+					<label for="car_info" class="d-none" id="car-id"></label>
+					<input type="text" id="car_info" class="form-control">
+				</div>
+				<div class="modal-footer">
+					<div class="ml-auto">
+						<button class="btn btn-primary" id="update-car-modal-btn" data-dismiss="modal" class="#update-car">Update</button>
+						<button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="d-none">
+		<button data-toggle='modal' data-target='#update-modal' id="lounchmodal"></button>
+	</div>
+	<footer>
+		<div id="testing"></div>
+	</footer>
+<script>
+const search = () => {
+	$.ajax({
+		url:"search.php",
+		data:{search: $("#search").val()},
+		type:'POST',
+		success: (data) => { //echo->data
+			if (!data.error){
+				$("#result").html(data);
+			}
+		}
+	})
+}
+    $(document).ready( () => {
+        //검색
+        $("#search").keyup( () => {
+			search();
+        })
+		//입력
+		$("#add-car-btn").click( () => {
+			$.ajax({
+				url:'store.php',
+				data :{car_title: $("#add-car").val()},
+				type:"POST",
+				success:(data)=>{
+					$("#car-added-alert").html(data).fadeIn(1000).fadeOut(3000);
+					search();
+				}
+			})
+		})
+		//삭제
+		$("#result").on('click','#btn-delete',function(){
+			$.ajax({
+				url:"delete.php",
+				data:{car_id: $(this).attr('data-id')},
+				type:"POST",
+				success:(data)=>{
+					console.log("삭제 성공");
+					$("#car-added-alert").html(data).fadeIn(1).fadeOut(10);
+					search();
+				}
+			})
+		})
+		$("#result").on("click","#btn-update",function (e) {
+			e.preventDefault();
+			var data_id = $(this).attr("data-id");
+			$.ajax({
+				url:"edit.php",
+				type:"POST",
+				data:{id: data_id},
+				success:(data) => {
+					$("#lounchmodal").click();
+					$("#car_info").val(data);
+					$("#car-id").text(data_id);
+				}
+			})
+
+		})
+
+		$("#update-car-modal-btn").click(function(){
+			$.ajax({
+				url:"update.php",
+				type:"POST",
+				data:{
+					id: parseInt($("#car-id").text()),
+					title: $("#car_info").val()
+				},
+				success:(data) => {
+					console.log("Updated Success");
+					search();
+				}
+			})
+		})
+    }); //docs
+</script>
+</body>
+</html>

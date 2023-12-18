@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김영모 과자점</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+
+  <link rel="stylesheet" href="css/new_product.css">
+  
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.k-bread.com/favicon.ico">
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><img src="https://www.k-bread.com/_skin/sw_kor_1/img/common/logo_on.png" alt="" width="170px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            BRAND
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="#">브랜드 스토리</a></li>
+            <li><a class="dropdown-item" href="#">명장 김영모</a></li>
+            <li><a class="dropdown-item" href="#">PR/MEDIA</a></li>
+          
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PRODUCT
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="new_product.html">신제품</a></li>
+            <li><a class="dropdown-item" href="#">구움과자</a></li>
+            <li><a class="dropdown-item" href="#">선물세트</a></li>
+            <li><a class="dropdown-item" href="#">빵</a></li>
+            <li><a class="dropdown-item" href="#">케이크</a></li>
+            <li><a class="dropdown-item" href="#">초콜릿</a></li>
+            <li><a class="dropdown-item" href="#">브런치</a></li>
+            <li><a class="dropdown-item" href="#">빙과류</a></li>
+            <li><a class="dropdown-item" href="#">주문케이크</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            STORE
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="#">김영모 과자점</a></li>
+            <li><a class="dropdown-item" href="#">PÉRE et FILS</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            COMMUNITY
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="#">공지사항</a></li>
+            <li><a class="dropdown-item" href="#">이벤트</a></li>
+            <li><a class="dropdown-item" href="#">SNS</a></li>
+            <li><a class="dropdown-item" href="#">FAQ</a></li>
+            <li><a class="dropdown-item" href="#">1:1문의</a></li>
+         
+        </li> </ul>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            E-SHOP
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="#">선물세트</a></li>
+            <li><a class="dropdown-item" href="#">단품선물세트</a></li>
+            <li><a class="dropdown-item" href="#">바움쿠헨 & 마카롱</a></li>
+            <li><a class="dropdown-item" href="#">롤케이크 & 카스테라</a></li>
+            <li><a class="dropdown-item" href="#">쿠폰상품</a></li>
+            <li><a class="dropdown-item" href="#">맞춤제작</a></li>
+          </ul>
+        </li>
+      
+      </ul>
+      <ul class="navbar-nav">
+        <a href="login.html" id="Login"><img src="img/enter.png" alt="" width="20px" style="margin-right: 10px;">Login</a>
+        <a href="join.html" id="Login"><img src="img/login.png" alt="" width="20px" style="margin-right: 10px;">Join</a>
+        <a href="list.php" id="Login"><img src="img/list.png" alt="" width="20px" style="margin-right: 10px;">List</a>
+        <a href="#" id="Login"><img src="img/shopping-cart.png" alt="" width="20px" style="margin-right: 10px;">Cart</a>
+       </ul> 
+
+    </div>
+  </div>
+</nav>
+
+<header class="new_product">
+  <div class="container" id="con1" style="margin-top: 150px;">
+
+   <div class="row" >
+     <p style="text-align: center;">
+     <h2 class="obj1" id="s1">PRODUCT</span></p>
+      <span class="obj2" id="s1">대를 이어가는 명장家 김영모과자점</span>
+   
+  
+     </div>
+ 
+   </div>
+ </header>
+
+
+ 
+ 
+    <div class="container category">
+      <div class="row">
+        <div class="col col1" id="new_product" style="font-family: 'GmarketSansLight'; cursor: pointer;" onclick="location.href='#';">
+          신제품
+        </div>
+        <div class="col col1" style="font-family: 'GmarketSansLight'; cursor: pointer; color:#7E7E7E" onclick="location.href='#';">
+          빵
+        </div>
+        <div class="col col1" style="font-family: 'GmarketSansLight'; cursor: pointer; color:#7E7E7E" onclick="location.href='#';">
+          케이크
+        </div>
+        <div class="col col1" style="font-family: 'GmarketSansLight'; cursor: pointer; color:#7E7E7E" onclick="location.href='#';">
+          구움과자
+        </div>
+        <div class="col col1" style="font-family: 'GmarketSansLight'; cursor: pointer; color:#7E7E7E" onclick="location.href='#';">
+          선물세트
+        </div>
+        <div class="col col1" style="font-family: 'GmarketSansLight'; cursor: pointer; color:#7E7E7E" onclick="location.href='#';">
+          초콜릿
+        </div>
+        <div class="col col1" style="font-family: 'GmarketSansLight'; cursor: pointer; color:#7E7E7E" onclick="location.href='#';">
+          브런치
+        </div>
+        <div class="col col1" style="font-family: 'GmarketSansLight'; cursor: pointer; color:#7E7E7E" onclick="location.href='#';">
+          빙과류
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="container text-center" id="con1">
+      <div class="line"></div>
+      <h3 class="sub-title" style="font-family: 'KOTRA_BOLD-Bold';">신제품</h3>
+
+      <div class="row">
+        <div class="col">
+          <img src="https://kbread2.wisacdn.com/_data/product/202001/02/5863a6edbd90d2f3041b916b5cda422a.jpg" alt="">
+          <br>
+          <strong>
+            <a href="chocolacoco.html" class="product">쇼콜라코코</a>
+          </strong><br>
+          <p>코코넛과 헤이즐넛의 고소함에<br>
+          초콜릿의 풍미가 어우러진 구움과자</p>
+          <p>
+            <strong class="price">1,800원</strong>
+          </p>
+        </div>
+        <div class="col">
+          <img src="https://kbread2.wisacdn.com/_data/product/202001/02/4358c30bcb0049fe5f8d4c7086048231.jpg" alt="">
+          <br>
+          <strong>
+            <a href="#" class="product">르쇼콜라</a>
+          </strong><br>
+          <p>진한 초콜릿의 풍미가 담긴 구움과자</p>
+          <p>
+            <strong class="price">1,800원</strong>
+          </p>
+        </div>
+        <div class="col">
+          <img src="https://kbread2.wisacdn.com/_data/product/202001/02/5928b53b19959710ab82034f34b42561.jpg" alt="">
+          <br>
+          <strong>
+            <a href="#" class="product">아몬드쵸코링</a>
+          </strong><br>
+          <p>아몬드가 박힌 초콜릿 맛 구움바다</p>
+          
+          <p>
+            <strong class="price">1,800원</strong>
+          </p>
+        </div>
+        <div class="col">
+          <img src="https://kbread2.wisacdn.com/_data/product/201909/27/ed945f6a59dc762ea4f318bef5c5d2e3.jpg" alt="">
+          <br>
+          <strong>
+            <a href="#" class="product">야채새우빵</a>
+          </strong><br>
+          <p>바삭한 새우와 아삭한 양배추가</br>
+            듬뿍 올라간 빵</p>
+          <p>
+            <strong class="price">4,500원</strong>
+          </p>
+        </div>
+      </div>
+
+      <hr style="margin-top: 90px;">
+
+      <div class="row">
+        <div class="col">
+          <img src="https://kbread2.wisacdn.com/_data/product/201909/27/9e252b311a414ba28a88f7832923eae3.jpg" alt="">
+          <br>
+          <strong>
+            <a href="#" class="product">명장스콘(얼그레이)</a>
+          </strong><br>
+          <p>겉은 바삭하고 속은 촉촉한<br>
+          영국 전통 빵</p>
+          <p>
+            <strong class="price">3,500원</strong>
+          </p>
+        </div>
+        <div class="col">
+          <img src="https://kbread2.wisacdn.com/_data/product/201909/27/b007afe019d5cda083f58acac542207a.jpg" alt="">
+          <br>
+          <strong>
+            <a href="#" class="product">명장스콘(플레인)</a>
+          </strong><br>
+          <p>겉은 바삭하고 속은 촉촉한<br>
+            영국 전통 빵</p>
+          <p>
+            <strong class="price">3,500원</strong>
+          </p>
+        </div>
+        <div class="col">
+          <img src="https://kbread2.wisacdn.com/_data/product/201909/27/1c4c4c5ade8d30c459a48d4d94193b25.jpg" alt="">
+          <br>
+          <strong>
+            <a href="#" class="product">초코몽블랑</a>
+          </strong><br>
+          <p>진한 쇼콜라와 김영모과자점의<br>
+          시그니처 몽블랑이 만난 초코 몽블랑</p>
+          
+          <p>
+            <strong class="price">5,500원</strong>
+          </p>
+        </div>
+        <div class="col">
+          <img src="https://kbread2.wisacdn.com/_data/product/201903/22/b7564b64dfbe23d6854497fdee5fc39f.jpg" alt="">
+          <br>
+          <strong>
+            <a href="#" class="product">와사비사무엘</a>
+          </strong><br>
+          <p>진한 와사비 파우더를 묻혀 더욱</br>
+            매력적인 맛이 완성된 호두쿠키</p>
+          <p>
+            <strong class="price">6,000원</strong>
+          </p>
+        </div>
+      </div>
+
+      <hr style="margin-top: 90px;">
+
+      <div class="row">
+        <div class="col">
+          <img src="https://kbread2.wisacdn.com/_data/product/201903/22/69b0eafbca443a0edd40c7a5acc327d5.jpg" alt="">
+          <br>
+          <strong>
+            <a href="#" class="product">크렘볼</a>
+          </strong><br>
+          <p>계피가루가 듬뿍들어가<br>
+          계피향 솔솔 나는 빵</p>
+          <p>
+            <strong class="price">2,200원</strong>
+          </p>
+        </div>
+        <div class="col">
+          <img src="https://kbread2.wisacdn.com/_data/product/201903/22/e20a3e5229b6cdb81afb4367ac65785d.jpg" alt="">
+          <br>
+          <strong>
+            <a href="#" class="product">항아리포테이토</a>
+          </strong><br>
+          <p>감자와 베이컨, 생크림과 마요네즈가<br>
+          섞인 크림의 조합이 훌륭한 바게트 빵</p>
+          <p>
+            <strong class="price">3,800원</strong>
+          </p>
+        </div>
+        <div class="col">
+          <img src="https://kbread2.wisacdn.com/_data/product/201903/22/d15d688358b612f787c74278695975d6.jpg" alt="">
+          <br>
+          <strong>
+            <a href="#" class="product">가지야채빵</a>
+          </strong><br>
+          <p>몸에 좋은 가지와 여러가지 야채,<br>
+          치즈가 들어가 건강하게 맛있는 빵</p>
+          
+          <p>
+            <strong class="price">5,500원</strong>
+          </p>
+        </div>
+        
+      </div>
+
+
+    </div>
+
+     <div class="container text-center" style="margin-top: 30px; margin-bottom: 30px;">    <!--이미지 컨테이너-->
+    <img src="https://www.k-bread.com/_skin/sw_kor_1/img/sub/make_cake_banner.jpg" class="img-fluid" alt="">
+  </div>
+
+  
+  <div style="background-color: #2F2B29; margin-top: 100px;  text-align: center;">
+    <img src="https://www.k-bread.com/_skin/sw_kor_1/img/common/footer_logo.gif" alt="">
+  <ul>
+    <li class="footer-li"><a href="#" style="color: white; text-decoration: none;">이용약관</a></li> |
+    <li class="footer-li"><a href="#" style="color: white; text-decoration: none;">개인정보처리방침</a></li> |
+      <li class="footer-li"><a href="#" style="color: white; text-decoration: none;">인재채용</a></li> |
+        <li class="footer-li"><a href="#" style="color: white; text-decoration: none;">협력 및 제안문의</a></li>
+  </ul>
+  <address style="color: white; font-family: 'GmarketSansLight';" >
+    ㈜파치시에 김영모
+    <span></span>
+    대표 : 서민정
+    <span></span>
+    사업자번호 : 129-86-21289
+    <span></span>
+    통신판매업신고번호 : 제2009-경기성남-0368호
+    <span></span>
+    이메일 : kymbread@naver.com<br>
+    경기 성남시 중원 사기막골로 159(상대원동 138-1) 금강하이테크밸리2차 108호
+    <span></span>
+    Tel: 031)737-4064
+    <span></span>
+    Fax: 031)737-4266
+    <span></span>
+    상담시간: 평일 9시~18시
+    <span></span>
+    <br>
+    개인정보관리책임자: 김정희031-737-4064
+    <span></span>
+    *김영모과자점의 홈페이지는 ㈜파치시에 김영모에서 운영합니다.
+    <br><br>
+    <p>Copyright © 김영모과자점,  All Rights Reserved</p>
+    
+  </address>
+  </div> 
+    </body>
+    </html>

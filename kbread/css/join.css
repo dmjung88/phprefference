@@ -1,0 +1,167 @@
+#Login{
+  text-decoration: none;
+  color: black;
+  margin-left: 30px;
+}
+.footer-li {
+display: inline-block;
+}
+a{
+font-family: 'KOTRA_BOLD-Bold';
+}
+
+ .login{
+  background-image: url(../img/login-main.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  overflow:hidden;
+
+} 
+
+@font-face {
+font-family: 'KOTRA_BOLD-Bold';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+
+}
+@font-face {
+font-family: 'GmarketSansLight';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+ @media (min-width: 768px) {
+#con1 {
+width: 1200px;
+}
+}
+
+@media (min-width: 992px) {
+#con1 {
+width: 1200px;
+}
+} 
+/*
+.log-con{  /*로그인 텝 컨테이너
+text-align: center;
+height: 437px;
+border: 1px solid #2B2821;
+margin-top: 90px;
+}
+*/
+
+.obj1{
+text-align: center;
+font-size: 33px;
+color: #FFFFFF;
+font-family: 'KOTRA_BOLD-Bold';
+
+}
+
+.obj2{
+font-size: 17px;
+color: #FFFFFF;
+font-family: 'GmarketSansLight';
+}
+
+.sub-title{
+text-align: center;
+color: #000000;
+font-family: 'KOTRA_BOLD-Bold';
+}
+
+
+.sub-title{
+text-align: center;
+}
+.sub-title::before{
+content: "";
+display: block;
+width: 50px;
+height: 1px;
+margin: auto;
+margin-top: 90px;
+margin-bottom: 30px;
+border-top: 1px solid #BD8961;
+
+}
+
+
+.join-box{
+  border: 1px solid #2B2821;
+  
+}
+
+
+/* .login-box{
+border: 1px solid #2B2821;
+height: 437px;
+margin-top: 65px;
+} 
+
+.product_bread :hover{
+background: rgba(255, 255, 255, 0.3);
+/* 변형할 것은 배경 1초, 빠른 시작 서서히 감속
+transition: background 1s ease-out;
+}
+
+/* .allWrap{
+border: 1px solid #2B2821;
+text-align: center;
+width: 830px;
+height: 437px;
+} 
+.tab-link{
+display: inline-block;
+background-color:#DADADA;
+color:#7E7E7E;
+padding: 28px 0px;
+font:18px;
+cursor: pointer;
+}
+.tab-link.current{
+background-color: #FFFFFF;
+color: #222222;
+}
+
+
+.tab-content{
+display: none;
+}
+.tab-content.current{
+display: block;
+}
+
+.hover-ch{
+color: white;
+}
+
+.a-ch{
+text-decoration: none;
+}
+
+.div-ch{
+background-color: black;
+}
+.div-ch:hover{
+background-color: burlywood;
+transition: 0.7s;
+}
+.product{
+color: #2B2821;
+text-decoration: none;
+}
+.product{
+color: #2B2821;
+text-decoration: none;
+}
+.product:hover{
+color: black;
+
+}
+.price{
+color: #BD8860;
+} */

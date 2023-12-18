@@ -1,0 +1,13 @@
+form {
+    margin: 2% 2% 2% 2%;
+    width: 60%;
+}
+
+.btn-submit{
+    float: right;
+    margin-right: 38%;
+}
+
+.btn-delete{
+    padding: 0px;
+}

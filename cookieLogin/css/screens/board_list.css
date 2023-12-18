@@ -1,0 +1,33 @@
+.board-list {
+  margin: 3% 2% 2% 2%;
+}
+
+.board-no {
+  text-align: center;
+}
+
+.enroll {
+  padding: 0px;
+}
+
+.enroll-btn {
+  float: right;
+}
+
+.board-page {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+.search-opt {
+  width: 90px;
+}
+
+/* .btn-before {
+  margin-right: 70%;
+} */

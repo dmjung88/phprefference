@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Car Shop</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+	
+	<div class="container text-center mt-5">
+		<h2>Search DataBase</h2>
+		
+
+		<input type="text" class="form-control" placeholder="Enter car name..." name="search" id="search">
+		
+		<div class="form-group mt-5">
+			<input type="text" class="form-control" name="car_title" id="add-car" placeholder="Add the title of the car">
+			<button class="btn btn-success mt-3" id="add-car-btn">Add Car</button>
+		</div>
+		
+		<h2 class="mt-5" id="result"></h2>
+		<br>
+		<p id="car-added-alert"></p>
+		
+		
+
+
+	</div>
+
+
+
+
+	<!-- UPDATE MODAL -->
+	<div class="modal fade" id="update-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title">Update the Car</h1>
+					<button class="close" type="button" data-dismiss="modal" area-label="close"><span area-hidden="true">&times;</span></button>
+				</div>
+
+				<div class="modal-body">
+					<label for="car_info" class="d-none" id="car-id"></label>
+					<input type="text" id="car_info" class="form-control">
+				</div>
+				<div class="modal-footer">
+					<div class="ml-auto">
+						<button class="btn btn-primary" id="update-car-modal-btn" data-dismiss="modal" class="#update-car">Update</button>
+						<button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="d-none">
+		<button data-toggle='modal' data-target='#update-modal' id="lounchmodal"></button>
+	</div>
+	<footer>
+		<div id="testing"></div>
+	</footer>
+
+	<script>
+		$(document).ready( () => {
+			
+
+
+
+			// Query For displaying car
+			$("#search").keyup( () => {
+				var search = $("#search").val();
+				$.ajax({
+					url:"search.php",
+					data:{search:search},
+					type:'POST',
+					success: (data) => {
+						if (!data.error){
+							$("#result").html(data);
+						}
+					}
+				});
+			});//End of Query for displaying car
+
+			// Query for adding car 
+			$("#add-car-btn").click( () => {
+				var car_title = $("#add-car").val();
+				
+				$.ajax({
+					url:"addcar.php",
+					data:{car_title:car_title},
+					type:"POST",
+					success:(data)=>{
+						console.log("Adding Car");
+						$("#car-added-alert").html(data);
+						$("#car-added-alert").fadeIn(1000);
+						$("#car-added-alert").fadeOut(3000);
+						var search = $("#search").val();
+						$.ajax({
+							url:"search.php",
+							data:{search:search},
+							type:'POST',
+							success: (data) => {
+								if (!data.error){
+									$("#result").html(data);
+								}
+							}
+						});
+					}
+				});
+			});//End of Query for adding car
+
+			// Deleteing with ajax requests...
+			$("#result").on('click','#btn-delete',function(){
+				var delete_id = $(this).attr('data-id');
+				$.ajax({
+					url:"delete.php",
+					data:{car_id:delete_id},
+					type:"POST",
+					success:(data)=>{
+						$("#car-added-alert").html(data);
+						$("#car-added-alert").fadeIn(1);
+						$("#car-added-alert").fadeOut(10);
+						var search = $("#search").val();
+						$.ajax({
+							url:"search.php",
+							data:{search:search},
+							type:'POST',
+							success: (data) => {
+								if (!data.error){
+									$("#result").html(data);
+								}
+							}
+						});
+					}
+				});
+			});//End of deleting with ajax requests...
+
+			
+				// Getting data to update the car and sending it to modal...
+			$("#result").on("click","#btn-update",function (event) {
+				var data_id = $(this).attr("data-id");
+				$.ajax({
+					url:"pre-update.php",
+					type:"POST",
+					data:{id:data_id},
+					success:(data) => {
+						console.log("PRE_UPDATE");
+						$("#lounchmodal").click();
+						$("#car_info").val(data);
+						$("#car-id").text(data_id);
+					}
+				});
+			});// End of Getting data to update the car and sending it to modal...
+
+			$("#update-car-modal-btn").click(function(){
+				var car_id = parseInt($("#car-id").text());
+				var car_title = $("#car_info").val();
+				$.ajax({
+					url:"update.php",
+					type:"POST",
+					data:{
+						id:car_id,
+						title:car_title
+					},
+					success:(data) => {
+						console.log("Updated Success Fully");
+						var search = $("#search").val();
+						$.ajax({
+							url:"search.php",
+							data:{search:search},
+							type:'POST',
+							success: (data) => {
+								if (!data.error){
+									$("#result").html(data);
+								}
+							}
+						});
+					}
+				});
+				console.log(car_id);
+				console.log(car_title);
+			});
+
+
+		});
+	</script>
+</body>
+</html>

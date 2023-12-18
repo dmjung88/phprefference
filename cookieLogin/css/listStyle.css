@@ -1,0 +1,59 @@
+.login{
+    margin: 2% 2% 2% 2%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.login__msg{
+    margin:0px;
+}
+
+.logout__btn,
+.login__btn,
+.signup__btn{
+    padding:5px 3px 5px 3px;
+}
+
+.login__btn{
+    margin-right: 1%;
+}
+
+.list-table {
+    margin: 0% 2% 2% 2%;
+    width: 60%;
+}
+
+.login__btn, 
+.signup__btn,
+.btn-enroll{
+    float: right;
+}
+
+.no-board {
+    text-align: center;
+}
+
+.input-btn {
+    padding: 0px;
+}
+
+.page-num{
+    text-align: center;
+}
+
+.search{
+    display: flex;
+}
+
+#search__nav{
+    width: 9%;
+}
+
+.btn-before{
+    margin-right:70%;
+}
+
+.search__content{
+    margin: 1% 0% 1% 2%;
+}
